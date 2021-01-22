@@ -4,5 +4,24 @@ body{
 
 .container{
   display: grid;
-  
+  grid-template: 300px 100px 100px / 50% 200px 100px;
+}
+
+.item{
+  background: lightcyan;
+  padding: 10px;
+  border: 1px solid lightcoral;
+}
+
+.item:nth-of-type(4){
+  background: lightseagreen;
+  overflow: auto;
+  /* display: subgrid; Not available yet January 2021 (https://www.w3.org/TR/css-grid-2/#subgrids) */
+  /* display: inline-grid; */
+  display: grid;
+  grid-template: 50px 50px 50px / 200px 200px 200px;
+}
+
+.item .item {
+  background: lightgreen;
 }
